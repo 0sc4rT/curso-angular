@@ -11,5 +11,5 @@ angular.module('uiApp')
       vm.show = !vm.show;
       return vm.show;
     };
-    
+    vm.user = { access : 'admin' }
   });

@@ -28,6 +28,18 @@
        <li>3</li>
     </ul>
 </div>
+<input type="text" ng-model="vm.user.access">
+<div ng-switch on="vm.user.access">
+    <div ng-switch-when="admin">
+        admin
+    </div>
+    <div ng-switch-when="user">
+        user
+    </div>
+    <div ng-switch-when="author">
+        author
+    </div>
+</div>
 
 
 
