@@ -11,6 +11,7 @@ angular.module('uiApp')
       {
         name: "Maria",
         age: 26
-      }];
+      }
+    ];
     vm.tableParams = new NgTableParams({}, {dataset: data});
   });

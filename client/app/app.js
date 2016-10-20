@@ -7,7 +7,8 @@ angular.module('uiApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'ngTable'
+  'ngTable',
+  'ui.grid'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
