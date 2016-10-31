@@ -1,5 +1,5 @@
 <uib-tabset justified="true" active="vmList.selected.index">
-  <uib-tab ng-repeat="tab in vmList.tabs" 
+  <uib-tab ng-repeat="tab in vmList.tabs"
            heading="{{tab.title}}"
            select="vmList.select(tab.index)">
     <div ui-view=""></div>

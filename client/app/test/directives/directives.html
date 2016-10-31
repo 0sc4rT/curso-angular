@@ -29,9 +29,10 @@
     </ul>
 </div>
 
-<!--div ng-switch="vm.message"-->
-<!--div ng-switch="vm.getAccess()"-->
-<div ng-switch="vm.message">    
+<!--<div ng-switch="vm.user.access">-->
+    <!--Not a good practice!!-->
+<!--<div ng-switch="vm.getAccess()">    -->
+<div ng-switch="vm.message">
     <div ng-switch-when="admin">
         I'm an Admin!
     </div>
@@ -39,7 +40,7 @@
         I'm an User
     </div>
     <div ng-switch-when="author">
-        I'm an Author'
+        I'm an Author
     </div>
     <div ng-switch-default>
         Default code
@@ -47,7 +48,7 @@
 </div>
 
 <div>
-    <p>{{ vm.message }}</p>
+    <p>{{vm.message}}</p>
     <p ng-bind="vm.message"></p>
 </div>
 
@@ -55,40 +56,27 @@
 <div my-input=""></div>
 <div class="my-input"></div>
 
-<p>Today's date: {{ vm.timeNow }}</p>
-<p>Today's date: {{ vm.timeNow | date:'dd-MM-yyyy'}}</p>
+<p>Today's date: {{vm.timeNow}}</p>
+<p>Today's date: {{vm.timeNow| date:'dd-MM-yyyy'}}</p>
 
-<pre>{{ vm.myObject | json }}</pre>
+<p>{{vm.myObject | json}}</p>
 
 <input type="number" ng-model="vm.price"/>
-<p>Price: {{ vm.price | currency }}</p>
-<p>Price: {{ vm.price | currency:'Bs.' }}</p>
-<p>Price: {{ vm.price | currency:'Bs.':0 }}</p>
-
-<ul>
-    <li ng-repeat="user in vm.users | limitTo:3">
-        {{ user.name }}
-    </li>
-</ul>
-
-<ul>
-    <li ng-repeat="user in vm.users | orderBy:'name'">
-        {{ user.name }}
-    </li>
-</ul>
-
-<p>{{ vm.message | myFilter:'m' }}</p>
-<p>{{ vm.message | myFilter:'M' }}</p>
-<p>{{ vm.message | myFilter:'A' }}</p>
+<p>Price in $: {{vm.price | currency}}</p>
+<p>Price in Bs: {{vm.price | currency:'Bs.'}}</p>
+<p>Price in Bs: {{vm.price | currency:'Bs.':0}}</p>
 
 <div>
-    Filtered: {{ vm.filtered }}
+    {{vm.message | myFilter:'M'}}
 </div>
 
 <div>
-    BOT: {{ vm.dateFiltered }}
+    Filtered: {{vm.filtered}}
 </div>
 
+<div>
+  BOT: {{vm.dateFiltered}}
+</div>
 
 
 
