@@ -35,13 +35,13 @@ angular.module('uiApp')
         function edit(student){
             var options = {
                 size: 'lg',
-                animation: true
+                animation:true
             };
             var dialog = dialogs.create(
-                'app/main/list/angular/edit-dialog/edit-dialog.html', 
-                'AngularEditController', 
-                student, 
-                options, 
+                'app/main/list/angular/edit-dialog/edit-dialog.html',
+                'AngularEditController',
+                student,
+                options,
                 'vmAngularEdit');
         }
 
