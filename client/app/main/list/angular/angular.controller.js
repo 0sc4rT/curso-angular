@@ -38,12 +38,12 @@ angular.module('uiApp')
                 animation:true
             };
             var dialog = dialogs.create(
-                'app/main/list/angular/edit-dialog/edit-dialog.html',
-                'AngularEditController',
-                student,
-                options,
-                'vmAngularEdit');
-            dialog.result.then(function(s){
+                'app/main/list/angular/edit-dialog/edit-dialog.html', //template url
+                'AngularEditController',                              //dialog controller
+                student,                                              //data available as a "data" service in the controller
+                options,                                              //Options for the dialog with the addition of copy: false|true which will copy the data instead of passing reference
+                'vmAngularEdit');                                     //controllerAs reference
+            dialog.result.then(function(s){             
                 activate();
             });
         }

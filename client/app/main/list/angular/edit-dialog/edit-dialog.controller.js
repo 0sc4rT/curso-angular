@@ -41,9 +41,11 @@
         {
           id: 'angular',
           student: data.id
-        } 
+        }
       );
-      vm.promise.then(function(response){
+      vm.promise.then(function(response) {
+        console.log("response");
+        console.log(response);
         $uibModalInstance.close(response);
       });
     }

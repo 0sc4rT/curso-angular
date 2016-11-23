@@ -6,6 +6,7 @@ angular.module('uiApp')
       .state('login', {
         url: '/login',
         templateUrl: 'app/login/login.html',
-        controller: 'LoginCtrl'
+        controller: 'LoginCtrl',
+        controllerAs: 'Login'
       });
   });

@@ -32,7 +32,7 @@ angular.module('uiApp')
       }, function(error){
         student.reject(error);
       });
-      return student.promise
+      return student.promise;
     }
 
     return {

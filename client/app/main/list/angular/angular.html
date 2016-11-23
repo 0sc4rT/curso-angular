@@ -1,12 +1,14 @@
 <table ng-table="vmAngular.tableParams" class="table" show-filter="true">
 	<tr ng-repeat="user in $data track by user.id">
 		<td title="'Id'" filter="{ id: 'number'}" sortable="'id'">
-			{{user.id}}</td>
+			{{user.id}}
+		</td>
 		<td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
-			{{user.name}}</td>
+			{{user.name}}
+		</td>
 		<td title="'Age'" filter="{ age: 'number'}" sortable="'age'">
 			{{user.age}}
-    </td>
+    	</td>
     <!--<td title="'Age'" filter="{ age: 'number'}" sortable="'age'">
 			{{vmAngular.getAge(user.birthDate)}}
     </td>-->
