@@ -28,7 +28,11 @@ function LoginController(Validation) {
       );
       vm.promise.then(function(response) {
         console.log("response");
-        console.log(response.id);
+        if (response.id) {
+          console.log(response.id);
+        } else {
+          console.log("El usuario o la contraseña no son correctos!!");
+        }
       });
     }
 }
