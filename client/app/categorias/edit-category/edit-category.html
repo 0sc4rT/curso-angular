@@ -1,0 +1,133 @@
+<div class="modal-header">
+	<h5 class="modal-title">Edición</h5>
+</div>
+<div class="modal-body">
+	<form name="formEdit" class="form-horizontal" novalidate>
+    <div class="form-group" ng-class="{'has-error': formEdit.marca.$invalid && formEdit.marca.$dirty}">
+      <label class="col-sm-2 control-label">Marca: </label>
+      <div class="col-sm-4">
+        <input name="marca"
+               type="text"
+               class="form-control"
+               ng-model="EditCategory.selected.marca"
+               ng-required="true"
+               ng-pattern="/^[a-zA-Z\- ]*$/">
+        <span class="help-block" ng-if="formEdit.marca.$error.pattern && formEdit.marca.$dirty">
+          Only characters allowed
+        </span>
+        <span class="help-block" ng-if="formEdit.marca.$error.required && formEdit.marca.$dirty ">
+          Required
+        </span>
+      </div>
+    </div>
+  
+    <div class="form-group" ng-class="{'has-error': formEdit.modelo.$invalid && formEdit.modelo.$dirty}">
+      <label class="col-sm-2 control-label">Modelo: </label>
+      <div class="col-sm-4">
+        <input name="modelo"
+               type="text"
+               class="form-control"
+               ng-model="EditCategory.selected.modelo"
+               ng-required="true"
+               ng-pattern="/^[a-zA-Z0-9\- ]*$/">
+        <span class="help-block" ng-if="formEdit.modelo.$error.pattern && formEdit.modelo.$dirty">
+          Only characters allowed
+        </span>
+        <span class="help-block" ng-if="formEdit.modelo.$error.required && formEdit.modelo.$dirty ">
+          Required
+        </span>
+      </div>
+    </div>
+    
+    <div class="form-group" ng-class="{'has-error': formEdit.precio.$invalid && formEdit.precio.$dirty}">
+      <label class="col-sm-2 control-label">Precio: </label>
+      <div class="col-sm-4">
+        <input name="precio"
+               type="text"
+               class="form-control"
+               ng-model="EditCategory.selected.precio"
+               ng-required="true"
+               ng-pattern="/^[0-9]+$/">
+        <span class="help-block" ng-if="formEdit.precio.$error.pattern && formEdit.precio.$dirty">
+          Only numbers allowed
+        </span>
+        <span class="help-block" ng-if="formEdit.precio.$error.required && formEdit.precio.$dirty ">
+          Required
+        </span>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <div class="form-group">
+    <button class="btn btn-primary" type="button" ng-disabled="formEdit.$invalid" ng-click="EditCategory.saveChanges()">Save</button>
+    <button class="btn btn-warning" type="button" ng-click="EditCategory.close()">Cancel</button>
+  </div>
+</div>
+
+
+<!--div class="edit-content" cg-busy="EditCategory.promise">
+  <form name="formEdit" class="form-horizontal" novalidate>
+    <div class="form-group" ng-class="{'has-error': formEdit.marca.$invalid && formEdit.marca.$dirty}">
+      <label class="col-sm-2 control-label">Marca: </label>
+      <div class="col-sm-4">
+        <input name="marca"
+               type="text"
+               class="form-control"
+               ng-model="EditCategory.selected.marca"
+               ng-required="true"
+               ng-pattern="/^[a-zA-Z\- ]*$/">
+        <span class="help-block" ng-if="formEdit.marca.$error.pattern && formEdit.marca.$dirty">
+          Only characters allowed
+        </span>
+        <span class="help-block" ng-if="formEdit.marca.$error.required && formEdit.marca.$dirty ">
+          Required
+        </span>
+      </div>
+    </div>
+    
+    <div class="form-group" ng-class="{'has-error': formEdit.modelo.$invalid && formEdit.modelo.$dirty}">
+      <label class="col-sm-2 control-label">Modelo: </label>
+      <div class="col-sm-4">
+        <input name="modelo"
+               type="text"
+               class="form-control"
+               ng-model="EditCategory.selected.modelo"
+               ng-required="true"
+               ng-pattern="/^[a-zA-Z0-9\- ]*$/">
+        <span class="help-block" ng-if="formEdit.modelo.$error.pattern && formEdit.modelo.$dirty">
+          Only characters allowed
+        </span>
+        <span class="help-block" ng-if="formEdit.modelo.$error.required && formEdit.modelo.$dirty ">
+          Required
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error': formEdit.precio.$invalid && formEdit.precio.$dirty}">
+      <label class="col-sm-2 control-label">Precio: </label>
+      <div class="col-sm-4">
+        <input name="precio"
+               type="text"
+               class="form-control"
+               ng-model="EditCategory.selected.precio"
+               ng-required="true"
+               ng-pattern="/^[0-9]+$/">
+        <span class="help-block" ng-if="formEdit.precio.$error.pattern && formEdit.precio.$dirty">
+          Only numbers allowed
+        </span>
+        <span class="help-block" ng-if="formEdit.precio.$error.required && formEdit.precio.$dirty ">
+          Required
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-4">
+        <button ng-disabled="formEdit.$invalid" ng-click="EditCategory.saveChanges()" class="btn btn-primary">
+          Save
+        </button>
+      </div>
+    </div>
+  </form>
+</div-->

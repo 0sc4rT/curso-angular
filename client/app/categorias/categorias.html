@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="row">
+		<!--button class="btn btn-link btn-xs col-md-3 col-md-offset-3" ng-click="Categorias.toComputers()">Computadoras</button>
+		<button class="btn btn-link btn-xs col-md-3" ng-click="Categorias.toCells()">Celulares</button-->
+		<a class="col-md-3 col-md-offset-3  text-center" href="#" ng-click="Categorias.toComputers()">Computadoras</a>
+		<a class="col-md-3  text-center" href="#" ng-click="Categorias.toCells()">Celulares</a>
+	</div>
+	<table ng-table="Categorias.tableParams" class="table table-bordered table-striped">
+		<tr ng-repeat="categoria in $data">
+			<td title="'Id'">
+				{{categoria.id}}
+			</td>
+			<td title="'Marca'">
+				{{categoria.marca}}
+			</td>
+			<td title="'Modelo'">
+				{{categoria.modelo}}
+			</td>
+			<td title="'Precio'">
+				{{categoria.precio}}
+			</td>
+			<td title="'Opciones'">
+				<button class="btn btn-primary btn-xs" ng-click="Categorias.editCategory(categoria)">Edit</button>
+				<button class="btn btn-danger btn-xs" ng-click="Categorias.deleteCategory(categoria)">Delete</button>
+			</td>
+		</tr>
+	</table>
+</div>

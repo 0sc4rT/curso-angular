@@ -25,11 +25,11 @@ export function get(req, res) {
       res.status(500).send('Internal Server Error');
     }
 
-    var array = lodash.find(obj.courses, function(course){
+    var array = lodash.find(obj.courses, function (course) {
       return course.key === req.params.id
     });
 
-    if(!array) {
+    if (!array) {
       res.status(404).send('Not Found');
     }
 
@@ -62,7 +62,7 @@ export function update(req, res) {
     }
 
     setTimeout(function () {
-      jsonfile.writeFile(FILE, {courses: obj.courses}, function (err) {
+      jsonfile.writeFile(FILE, { courses: obj.courses }, function (err) {
         console.error(err);
         //res.status(500).send('Error 500');
       });

@@ -1,1 +1,21 @@
-{"courses":[{"id":0,"name":"AngularJS","key":"angular","students":[{"id":10,"name":"Juan Jose Perez Velasco","birthDate":"09-05-1989"},{"id":11,"name":"Maria Flores","birthDate":"28-11-1988"}]}]}
+{
+    "courses": [
+        {
+            "id": 0,
+            "name": "AngularJS",
+            "key": "angular",
+            "students": [
+                {
+                    "id": 10,
+                    "name": "Juan Jose Perez Velasco",
+                    "birthDate": "09-05-1989"
+                },
+                {
+                    "id": 11,
+                    "name": "Maria Flores",
+                    "birthDate": "28-11-1988"
+                }
+            ]
+        }
+    ]
+}

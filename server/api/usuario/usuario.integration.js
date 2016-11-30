@@ -3,27 +3,27 @@
 var app = require('../..');
 import request from 'supertest';
 
-describe('Data API:', function() {
+describe('Usuario API:', function() {
 
-  describe('GET /api/datas', function() {
-    var datas;
+  describe('GET /api/usuarios', function() {
+    var usuarios;
 
     beforeEach(function(done) {
       request(app)
-        .get('/api/datas')
+        .get('/api/usuarios')
         .expect(200)
         .expect('Content-Type', /json/)
         .end((err, res) => {
           if (err) {
             return done(err);
           }
-          datas = res.body;
+          usuarios = res.body;
           done();
         });
     });
 
     it('should respond with JSON array', function() {
-      datas.should.be.instanceOf(Array);
+      usuarios.should.be.instanceOf(Array);
     });
 
   });
