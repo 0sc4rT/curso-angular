@@ -13,7 +13,7 @@ describe('Controller: EditDialogController', function () {
     deferred;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function ($controller, $rootScope,_$q_, _Course_) {
+  beforeEach(inject(function ($controller, $rootScope, _$q_, _Course_) {
     scope = $rootScope.$new();
     Course = _Course_;
     $q = _$q_;
@@ -48,7 +48,11 @@ describe('Controller: EditDialogController', function () {
     // deferred.reject({
     //   status: 401
     // });
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 113b9f5e319b55f5b4a4eb0898582a2aa676caa2
     controller.saveChanges();
     expect(Course.update).toHaveBeenCalled();
   });
@@ -64,4 +68,8 @@ describe('Controller: EditDialogController', function () {
     controller.openDateSelector();
     expect(controller.isDateOpened).toBeTruthy();
   });
+<<<<<<< HEAD
 });
+=======
+}); 
+>>>>>>> 113b9f5e319b55f5b4a4eb0898582a2aa676caa2

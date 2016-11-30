@@ -2,10 +2,12 @@
 
 angular.module('uiApp')
   .service('Course', function ($q, $resource) {
-    var resource = $resource('/api/cursos/:id/:student', {
-      id: '@id', 
-      student: '@student'}
-      , {
+    var resource = $resource('/api/cursos/:id/:student',
+      {
+        id: '@id',
+        student: '@student'
+      },
+      {
         'put': {
           method: 'PUT'
         }
@@ -13,12 +15,11 @@ angular.module('uiApp')
 
     function get(id) {
       var course = $q.defer();
-      resource.get({id: id}).$promise.then(function(response){
+      resource.get({ id: id }).$promise.then(function (response) {
         course.resolve(response);
-      }, function(error){
+      }, function (error) {
         course.reject(error);
       });
-
       return course.promise;
     }
 
@@ -27,9 +28,9 @@ angular.module('uiApp')
       resource.put({
         id: params.id,
         student: params.student
-      }, data).$promise.then(function(response){
+      }, data).$promise.then(function (response) {
         student.resolve(response)
-      }, function(error){
+      }, function (error) {
         student.reject(error);
       });
       return student.promise;
