@@ -2,7 +2,7 @@
 
 angular.module('uiApp')
   .controller('CategoriasCtrl', 
-  function (NgTableParams, Categoria, dialogs) {
+  function (NgTableParams, Categoria, dialogs, $rootScope) {
     var vm = this;
     vm.categoria = 'computadoras';
     vm.editCategory = editCategory;

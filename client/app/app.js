@@ -18,4 +18,11 @@ angular.module('uiApp', [
       .otherwise('/');
 
     $locationProvider.html5Mode(true);
-  });
+
+    
+  }).run(function ($rootScope) {
+    $rootScope.$on('$stateChangeStart', 
+  function(event, toState, toParams, fromState, fromParams, options){ 
+    console.log("adfadsf", toState);
+  })
+  })
