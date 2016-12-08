@@ -7,8 +7,8 @@ LoginController.$inject = ['Usuario', '$state'];
 
 function LoginController(Usuario, $state) {
     var vm = this;
-    vm.userName = '';
-    vm.password = '';
+    //vm.userName = '';
+    //vm.password = '';
     vm.login = login;    
 
     function activate() {
@@ -30,10 +30,12 @@ function LoginController(Usuario, $state) {
           if (response.pass) {
             $state.go('categorias');
           } else {
-            console.log('La contraseña no es correcta')
+            //console.log('La contraseña no es correcta')
+            alert('La contraseña no es correcta');
           }
         } else {
-          console.log('El usuario no es correcto')
+          //console.log('El usuario no es correcto')
+          alert('El usuario no es correcto');
         }
       }, function (reason) {
         console.log(reason);
